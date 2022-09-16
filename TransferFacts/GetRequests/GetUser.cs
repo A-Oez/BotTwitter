@@ -14,11 +14,12 @@ namespace TransferFacts.GetRequests
     {
         private readonly List<UserDataModel> userDataList = new List<UserDataModel>();
         private readonly TwitterCredentials credentials = new TwitterCredentials();
+        private const string URL = "https://api.twitter.com/2/users/USERID/following?user.fields=protected"; ////add your own USERID in the url 
+
 
         public List<UserDataModel> RequestCall()
         {
             System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-            var URL = "https://api.twitter.com/2/users/USERID/following?user.fields=protected"; //add your own USERID in the url 
             var client = new RestClient(URL);
             var request = new RestRequest(URL, Method.Get);
 
