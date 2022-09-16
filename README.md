@@ -1,4 +1,5 @@
 This bot responds to tweets from users the bot follows with a quote/fact. 
+
 The endpoints: 
 - Quotes: https://rapidapi.com/martin.svoboda/api/quotes15
 - Facts: https://uselessfacts.jsph.pl/
